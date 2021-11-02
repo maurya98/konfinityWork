@@ -1,0 +1,18 @@
+const gk=(obj)=>{
+  arr='';
+  arr=obj.name+'\n';
+  for(var i=0;i<obj.contents.length;i++){
+    if(typeof obj.contents[i]==='object')
+      arr+=gk(obj.contents[i]);
+    else
+      arr+=obj.contents[i]+'\n';
+  }
+  return arr;
+};
+
+const gaurav=(obj)=>{
+  s='';
+  s+=gk(obj);
+  return s;
+};
+module.exports=gaurav;

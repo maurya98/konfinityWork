@@ -1,0 +1,9 @@
+const gk=(obj)=>{
+  var arr=[];
+  for(let i=0;i<obj.types.numberData.primeNumbers.length;i++){
+    var x=obj.types.numberData.primeNumbers[i];
+    arr.push(x);
+  }
+  return arr;
+};
+module.exports=gk;

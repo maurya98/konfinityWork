@@ -1,0 +1,11 @@
+const gk=(obj)=>{
+  var arr=[];
+  for(let i=0;i<obj.innerData.numberData.fibonnaci.length;i++){
+    if((obj.innerData.numberData.fibonnaci[i])%2===0){
+      var x=obj.innerData.numberData.fibonnaci[i];
+      arr.push(x);
+    }
+  }
+  return arr;
+};
+module.exports=gk;

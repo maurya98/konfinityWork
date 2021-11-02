@@ -1,0 +1,17 @@
+const gk=(obj)=>{
+  var a=obj.ability;
+  var l=obj.ability.length;
+  var step=obj.steps;
+  var c=new Array(step+1); 
+  for(var i=0;i<c.length;i++)
+    c[i]=0;
+  c[0]=1; 
+  for(i=1;i<=step;i++) {
+    for(var j=0;j<l;j++){ 
+      if(i>=a[j]) 
+        c[i]+=c[i-a[j]]; 
+    }
+  }
+  return c[step];  
+};
+module.exports=gk;

@@ -1,0 +1,6 @@
+const gk=(obj)=>{
+  var arr=[];
+  arr.push(obj.innerData.snacks[1].itemName);
+  return arr;
+};
+module.exports=gk;

@@ -1,0 +1,8 @@
+const gk=(obj)=>{
+  var a=[];
+  for(var i=0;i<obj.length;i++){
+      a.push(obj[i].title);
+  }
+  return a;
+};
+module.exports=gk;

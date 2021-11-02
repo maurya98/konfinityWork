@@ -1,0 +1,9 @@
+const gk=(obj)=>{
+  console.log(typeof(obj));
+  console.log(obj);
+  if((typeof obj==='object' && obj!==null && obj!==undefined )|| typeof(obj)==="function")
+    return true;
+  else
+    return false;
+};
+module.exports=gk;

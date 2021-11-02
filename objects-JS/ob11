@@ -1,0 +1,13 @@
+const gk=(obj)=>{
+  var a=[];
+  for(var i=0;i<obj.servings.length;i++){
+    for(var j=i+1;j<obj.servings.length;j++){
+      if(obj.servings[i]==obj.servings[j] && a.indexOf(obj.servings[i])<0){
+        a.push(obj.servings[i]);
+        break;
+      }
+    }
+  }
+  return a;
+};
+module.exports=gk;

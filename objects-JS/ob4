@@ -1,0 +1,5 @@
+const gk=(obj,c,cap,p)=>{
+  obj.data.continents.europe.countries.c={capital:cap,population:p};
+  return obj.data.continents.europe.countries.c;
+};
+module.exports=gk;

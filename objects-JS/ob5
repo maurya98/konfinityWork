@@ -1,0 +1,13 @@
+const gk=(obj)=>{
+  var a=[],b=[];
+  for(var i=0;i<obj.length;i++){
+    if(obj[i].readingStatus===true)
+      a.push(obj[i]);
+    else
+      b.push(obj[i]);
+  }
+  var o={prop1:a,prop2:b};
+  return o;
+};
+module.exports=gk;
+  

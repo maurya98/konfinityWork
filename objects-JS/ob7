@@ -1,0 +1,9 @@
+const gk=(obj)=>{
+  var s=0;
+  for(var i=0;i<obj.length;i++){
+    if(obj[i].isForceUser===true)
+      s=s+(obj[i].pilotingScore+obj[i].shootingScore);
+  }
+  return s;
+};
+module.exports=gk;

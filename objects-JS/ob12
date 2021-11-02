@@ -1,0 +1,15 @@
+const gk=(x)=>{
+  var kv = {
+     "up": function(x) {
+    return x.toUpperCase();
+  }, "low": function(x) {
+    return x.toLowerCase();
+  }, "len": function(x) {
+    return x.length;
+  }, "sta": function(x) {
+    return x.split('');
+  }
+  };
+  return kv;
+};
+module.exports=gk;

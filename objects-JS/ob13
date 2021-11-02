@@ -1,0 +1,53 @@
+const gk=(x,y)=>{
+  var obj={
+    'pyramid' : function(n,x) {
+    var output="";
+    var a='';
+    for(var i=0;i<n;i++) {
+      var myspace = "";   
+      for(let s=0;s<(n-i-1);s++) {
+        myspace+= " ";
+      }
+      for(var j=1;j<=2*i+1;j++) {
+        output+= x;
+      }
+      a +=myspace+output+"\n";
+      output="";
+    }
+    return a;
+    },
+    'diamond' : function(n,x) {
+    var m= "";
+      for(var i=1;i<=n;i++){
+        gap = "";
+        for(var j=i;j<n;j++){
+          gap += " ";
+        }
+        for(var k=0;k<(i*2)-1;k++){
+          if(k%2===0)
+            gap += x;
+          else
+            gap += " ";
+        }
+        m += (gap+" \n");
+      }
+      gap="";
+      for(i=n;i>=1;i--){
+        gap = "";
+        for(j=i;j<n;j++){
+          gap += " ";
+        }
+        for(k=0;k<(i*2)-1;k++){
+          if(k%2===0)
+            gap+= x;
+          else
+            gap += " ";
+        }
+        m += (gap+" \n");
+      }
+      return m;
+    }
+  };
+  return obj;
+};
+module.exports=gk;
