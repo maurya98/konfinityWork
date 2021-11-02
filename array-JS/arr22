@@ -1,0 +1,21 @@
+const gk=(a)=>{ 
+  var flag=false, arr=[]; 
+  var s=0,l=a.length-1;
+  for (var i=1; i<a.length;i++){
+    for (var j=0;j<i;j++){
+      if (a[i]<a[j]) {
+        var[element]=a.splice(i,1);
+        a.splice(j,0,element);
+      }
+    }
+  }
+  for(i=0;i<a.length;i++){ 
+    if(flag) 
+      arr.push(a[l--]); 
+    else
+      arr.push(a[s++]); 
+    flag=!flag; 
+  }  
+  return arr;
+};
+module.exports=gk;

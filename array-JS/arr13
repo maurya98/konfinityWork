@@ -1,0 +1,7 @@
+const gk=(n,p)=>{
+  var a=[];
+  for(var i=0;i<p;i++)
+    a.push(n++);
+  return a;
+};
+module.exports=gk;

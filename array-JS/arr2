@@ -1,0 +1,4 @@
+const gk=(a,n)=>{
+  return(a.slice(-n));
+}
+module.exports=gk;

@@ -1,0 +1,15 @@
+const gk=(a,b)=>{
+  var arr=[];
+  var l=a.length<b.length?a.length:b.length;
+  for(var i=0;i<l;i++)
+    arr.push(a[i]+b[i]);
+  var len=a.length>b.length?a.length:b.length;
+  for(i=l;i<len;i++){
+    if(a.length>b.length)
+      arr.push(a[i]);
+    else
+      arr.push(b[i]);
+  }
+  return arr;
+};
+module.exports=gk;

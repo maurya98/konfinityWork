@@ -1,0 +1,14 @@
+const gk=(a,n)=>{
+  var flag=0;
+  for(var i=0;i<a.length;i++){
+    if(a[i]===n){
+      a.splice(i,1);
+      flag=1;
+    }
+  }
+  if(flag===0)
+    return false;
+  else
+    return a;
+};
+module.exports=gk;

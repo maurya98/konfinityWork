@@ -1,0 +1,8 @@
+const gk=(a,x,y)=>{
+  var t=a[x];
+  for(var i=x;i<y;i++)
+    a[i]=a[i+1];
+  a[y]=t;
+  return a;
+};
+module.exports=gk;

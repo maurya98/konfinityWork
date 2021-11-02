@@ -1,0 +1,17 @@
+const gk=(a,x)=>{
+  var d=0;
+  for(var i=1;i<a.length;i++){ 
+    d=Math.abs(a[i]-x); 
+    var j=i-1; 
+    if(Math.abs(a[j]-x)>d){
+      var temp=a[i]; 
+      while(Math.abs(a[j]-x)>d && j>=0){
+        a[j+1]=a[j];
+        j--; 
+      } 
+      a[j+1]=temp; 
+    } 
+  }
+  return a;
+};
+module.exports=gk;

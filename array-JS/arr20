@@ -1,0 +1,32 @@
+const gk=(n)=>{
+  var result=new Array(n).fill().map(() => new Array(n).fill(''));
+  var count = 1;
+  var startcol = 0;
+  var endcol = n-1;
+  var startrow = 0;
+  var endrow = n-1;
+  while(startcol<=endcol && startrow<=endrow){
+    for (var i=startcol;i<=endcol;i++){
+      result[startrow][i]=count;
+      count++;
+    }
+    startrow++;
+    for(var j=startrow;j<=endrow;j++){
+      result[j][endcol]=count;
+      count++;
+    }
+    endcol--;
+    for(i=endcol;i>=startcol;i--){
+      result[endrow][i]=count;
+      count++;
+    }
+    endrow--;
+    for(i=endrow;i>=startrow;i--){
+      result[i][startcol]=count;
+      count++;
+    }
+    startcol++;
+    }
+    return result;
+};
+module.exports=gk;

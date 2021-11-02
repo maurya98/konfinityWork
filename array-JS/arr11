@@ -1,0 +1,11 @@
+const gk=(x,y)=>{
+  var arr=[];
+  for(var i=x;i<=y;i++){
+    if(i%4===0 && i%100!==0)
+      arr.push(i);
+    else if(i%100===0 && i%400===0)
+      arr.push(i);
+  }
+  return arr;
+};
+module.exports=gk;

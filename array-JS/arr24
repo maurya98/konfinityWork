@@ -1,0 +1,22 @@
+const gk=(ad,n,s)=>{
+  var q=[];
+  var visited=new Array(n);
+  for(var i=0;i<n;i++)
+    visited[i]=0;
+  var arr=[];
+  q.push(s);
+  visited[s]=1;
+  arr.push(q[0]);
+  while(q.length){
+    i=q.shift();
+    for(var j=0;j<n;j++){
+      if(visited[j]===0 && ad[i][j]===1){
+        visited[j]=1;
+        q.push(j);
+        arr.push(j);
+      }
+    }
+  }
+  return arr;
+};
+module.exports=gk;

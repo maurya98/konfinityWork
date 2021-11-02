@@ -1,0 +1,18 @@
+const gk=(a,b)=>{
+  var flag=0,arr=[];
+  a.forEach(function(e){
+    arr.push(e); 
+  });
+  b.forEach(function(e){
+    arr.push(e);
+  });
+  for(var i=0;i<arr.length;i++){
+    for(var j=i+1;j<arr.length;j++){
+      if(arr[i]===arr[j]){
+        arr.splice(j,1);
+      }
+    }
+  }
+  return arr;
+};
+module.exports=gk;

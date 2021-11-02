@@ -1,0 +1,10 @@
+const gk=(a)=>{
+  var arr=[];
+    a.forEach(function(e){
+        if(arr.indexOf(e)<0){
+            arr.push(e);
+        }
+    });
+    return arr;
+};
+module.exports=gk;

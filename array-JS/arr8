@@ -1,0 +1,10 @@
+const gk=(a)=>{
+  var sum=0,mul=1;
+  a.forEach(function(element){
+    sum+=element;
+    mul*=element;
+  });
+  x=[sum,mul];
+  return x;
+};
+module.exports=gk;

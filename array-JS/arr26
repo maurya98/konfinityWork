@@ -1,0 +1,13 @@
+const gk=(m1,m2,n)=>{
+  arr=new Array(n);
+  for(var r=0;r<n;++r){
+    arr[r]=new Array(n);
+    for(var c=0;c<n;++c){
+      arr[r][c]=0;
+      for(var k=0;k<n;++k)
+        arr[r][c]=arr[r][c]+( m1[r][k] * m2[k][c] );
+    }
+  }
+  return arr;
+};
+module.exports=gk;

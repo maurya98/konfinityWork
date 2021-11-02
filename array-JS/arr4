@@ -1,0 +1,19 @@
+const gk=(a)=>{
+  var count=1;
+  var c=0;
+  var item;
+  for(var i=0;i<a.length;i++,c=0){
+    for(var j=i;j<a.length;j++){
+      if(a[i]===a[j]){
+        c++; 
+      }
+      if(count<c){
+        count=c;
+        item=a[i];
+      }
+    }
+  }
+  var z=[item,count];
+  return z;
+};
+module.exports=gk;

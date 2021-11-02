@@ -1,0 +1,13 @@
+const gk=(n)=>{
+  var a = n.toString();
+  String.prototype.insert = function(char,x){
+    return this.slice(0,x)+char+this.slice(x);
+  }
+  for(var i=0; i<a.length; i++){
+    if(parseInt(a.charAt(i))%2===0 && parseInt(a.charAt(i+1))%2===0){
+        a = a.insert('-',i+1);
+    }
+  }
+  return a;
+}
+module.exports=gk;
