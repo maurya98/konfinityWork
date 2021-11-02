@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>task2</title>
+</head>
+<body>
+<h1><mark>My blog about my life<mark></h1>
+<ul>
+  <li><h2>Meeting with the supervisor</h2>
+    <ol>
+    <li>Today I went to the university bus.</li>
+    <li><strike>I had met with my PhD supervisor.</strike></li>
+    </ol>
+  </li>
+  <li><h2>Visit my parents</h2>
+    <ol>
+    <li><u>10-June-2019</u></li>
+    <li>I visited my parents and had a great dinner together.</li>
+    </ol>
+  </li>
+  <li><h2>My to-do list</h2>
+    <ol>
+    <li><a href="">Today</a></li>
+    <li><a href="">Tomorrow</a></li>
+    <li><a href="">Yesterday</a></li>
+    </ol>
+  </li>
+</ul>
+</body>
+</html>
