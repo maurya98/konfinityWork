@@ -1,0 +1,7 @@
+const gk=(str)=>{
+  if(str.length!==0)
+    return str.length;
+  else
+    return 'zero';
+};
+module.exports=gk;

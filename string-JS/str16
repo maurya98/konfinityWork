@@ -1,0 +1,15 @@
+const gk=(str)=>{
+  var arr='';
+  s=str.toLowerCase().split('');
+  for(var i=0;i<s.length;i++){
+    if(s[i]==='a'||s[i]==='e'||s[i]==='i'||s[i]==='o'||s[i]==='u')
+      s[i]=s[i].toUpperCase();
+    else
+      s[i]=s[i].toLowerCase();
+  }
+  for(i=0;i<s.length;i++){
+    arr+=s[i];
+  }
+  return arr;
+};
+module.exports=gk;

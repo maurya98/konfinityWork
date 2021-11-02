@@ -1,0 +1,13 @@
+const gk=(str,n)=>{
+  var arr=[];
+  for(var i=0;i<str.length;i++){
+    if(str[i]===' ')
+      arr.push(' ');
+    else if((str.charCodeAt(i)+n)<=122)
+      arr.push(String.fromCharCode(str.charCodeAt(i)+n));
+    else
+      arr.push(String.fromCharCode(((str.charCodeAt(i)+n)%122)+96));
+  }
+  return arr.join('');
+};
+module.exports=gk;

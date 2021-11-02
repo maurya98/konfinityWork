@@ -1,0 +1,9 @@
+const gk=(str,w,n)=>{
+  var arr='';
+  var s=str.split('');
+  s.splice(n,0,w+' ');
+  for(var i=0;i<s.length;i++)
+    arr+=''+s[i];
+  return arr.trim();
+};
+module.exports=gk;

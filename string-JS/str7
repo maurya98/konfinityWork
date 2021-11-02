@@ -1,0 +1,10 @@
+const gk=(str)=>{
+  var arr='';
+  var w=str.split(' ');
+  for(var i=0;i<w.length;i++){
+    w[i]=w[i].slice(0,1).toUpperCase()+w[i].slice(1,w[i].length);
+    arr=arr+' '+w[i];
+  }
+  return arr.trim();
+};
+module.exports=gk;

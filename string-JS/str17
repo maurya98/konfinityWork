@@ -1,0 +1,9 @@
+const gk=(str,sub)=>{
+  str=str.trim();
+  sub=sub.trim();
+  if(str.endsWith(sub))
+    return true;
+  else
+    return false;
+};
+module.exports=gk;

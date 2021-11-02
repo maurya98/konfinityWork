@@ -1,0 +1,7 @@
+const gk=(str,n)=>{
+  var arr='';
+  for(var i=0;i<n;i++)
+    arr+=str;
+  return arr;
+};
+module.exports=gk;

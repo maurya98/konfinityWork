@@ -1,0 +1,7 @@
+const gk=(str)=>{
+  for(var i=0;i<str.length;i++){
+    if(str[i]==='@')
+      return str.slice(0,4)+'....'+str.slice(i,str.length);
+  }
+};
+module.exports=gk;

@@ -1,0 +1,9 @@
+const gk=(str,sub)=>{
+  str=str.toLowerCase();
+  sub=sub.toLowerCase();
+  if(str.indexOf(sub)>=0)
+    return true;
+  else
+    return false;
+};
+module.exports=gk;

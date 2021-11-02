@@ -1,0 +1,68 @@
+function sort(str){
+  return(str.split("").sort().join(""));
+}
+
+function Anagram(w1,w2){
+  var x=sort(w1);
+  var y=sort(w2);
+  if(x===y)
+    return true;
+  else
+    return false;
+}
+
+function isAnagram(s1,s2){
+  for(var i=0;i<(s1.length-s2.length+1);i++){
+    if(Anagram(s1.slice(i,i+s2.length),s2)){
+      return true;
+    }
+  }
+  return false;
+}
+
+const gk=(s,r)=>{
+  var a1=[];
+  var a2=[];
+  var a3=[];
+  var i,j;
+  for(i=0;i<s.length;i++)
+    a1.push(s[i]);
+  for(i=0;i<s.length;i++)
+    a3.push(s[i]);
+  for(i=0;i<r.length;i+=4){
+    var t=[];
+    var dir=r[i];
+    var mag=r[i+2];
+    if(dir=="L"){
+      for(j=0;j<mag;j++)
+        t.push(a1[j]);
+      a1.reverse();
+      while(mag--)
+        a1.pop();
+      a1.reverse();
+      for(j=0;j<t.length;j++)
+        a1.push(t[j]);
+      a2.push(a1[0]);
+    }
+    else if(dir=="R"){
+      for(j=a1.length-mag;j<a1.length;j++)
+        t.push(a1[j]);
+      while(mag--)
+        a1.pop();
+      for(j=0;j<a1.length;j++)
+        t.push(a1[j]);
+      while(a1.length)
+        a1.pop();
+      for(j=0;j<t.length;j++)
+        a1.push(t[j]);
+      a2.push(a1[0]);
+    }
+  }
+  a2=a2.join("");
+  a3=a3.join("");
+  if(isAnagram(a3,a2))
+    return"YES";
+  else
+    return"NO";
+};
+module.exports=gk;

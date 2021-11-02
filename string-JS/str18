@@ -1,0 +1,8 @@
+const gk=(str,n)=>{
+  var s=str.split("");
+  if(s[n].toLowerCase()===s[n])
+    return true;
+  else
+    return false;
+};
+module.exports=gk;

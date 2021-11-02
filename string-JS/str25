@@ -1,0 +1,5 @@
+const gk=(a,b)=>{
+  var mul=Number(parseInt(a,2))*Number(parseInt(b,2));
+    return mul.toString(2);
+};
+module.exports=gk;

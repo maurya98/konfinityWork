@@ -1,0 +1,10 @@
+const gk=(str)=>{
+  var az='abcdefghijklmnopqrstuvwxyz';
+  az=az.split('');
+  for(var i=0;i<az.length;i++){
+    if(str.indexOf(az[i])<0)
+      return false;
+  }
+  return true;
+};
+module.exports=gk;

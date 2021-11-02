@@ -1,0 +1,12 @@
+const gk=(n)=>{
+  var d=n%10;
+  var r='';
+  switch(d){
+    case 1: r=n.toString()+'st'; break;
+    case 2: r=n.toString()+'nd'; break;
+    case 3: r=n.toString()+'rd'; break;
+    default: r=n.toString()+'th';
+  }
+  return r;
+};
+module.exports=gk;

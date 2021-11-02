@@ -1,0 +1,4 @@
+const gk=(str)=>{
+  return str.toLowerCase();
+};
+module.exports=gk;
