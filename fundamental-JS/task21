@@ -1,0 +1,17 @@
+const angle=(i)=>{
+  if(i>0&&i<90){
+    return("Acute angle");
+  }
+  else if(i===90){
+    return("Right angle");
+  }
+  else if(i>90&&i<180){
+    return("Obtuse angle");
+  }
+  else if(i===180){
+    return("Straight angle");
+  }
+};
+var a=angle();
+console.log(a);
+module.exports=angle;

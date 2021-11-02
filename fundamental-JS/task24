@@ -1,0 +1,12 @@
+const cube=(n)=>{
+  var i=1;
+  var sum=0;
+  while(i<=n){
+        sum=sum+(i*i*i);
+        i += 1;
+    }
+  return(sum);
+};
+var c=cube();
+console.log(c);
+module.exports=cube;

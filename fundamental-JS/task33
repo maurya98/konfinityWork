@@ -1,0 +1,21 @@
+const arm=(b)=>{
+  var e, x=b, d = 0;
+    var z=b;
+    var a=0;
+    while(z>0){
+        a++;
+        z=parseInt(z/10);
+    }
+while (x > 0) {
+  e = x % 10;
+  x = parseInt(x/10);
+  d = d + Math.pow(e,a);
+}
+if (b==d){
+    return true;
+}
+else{
+    return false;
+}
+};
+module.exports=arm;

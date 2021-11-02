@@ -1,0 +1,4 @@
+const cube=(x,n)=>{
+  return(Math.pow(x,n));
+};
+module.exports=cube;

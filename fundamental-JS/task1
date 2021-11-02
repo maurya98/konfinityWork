@@ -1,0 +1,10 @@
+const per=()=>{
+  var a=50;
+  var b=40;
+  var c=60;
+  var d=90;
+  var e=10;
+  return ((a+b+c+d+e)/5);
+};
+console.log(per());
+module.exports=per;

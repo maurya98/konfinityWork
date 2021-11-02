@@ -1,0 +1,6 @@
+const temp=(c)=>{
+  return(((9/5)*c)+32);
+}
+var f=temp(43);
+console.log(f);
+module.exports=temp;

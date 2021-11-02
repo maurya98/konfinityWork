@@ -1,0 +1,13 @@
+var s=0;
+const sol=(a,b)=>{
+  s=a+b;
+  if(s===8||a===8||b===8){
+    return(true);
+  }
+  else{
+    return(false)
+  }
+};
+var z=sol();
+console.log(z);
+module.exports=sol;

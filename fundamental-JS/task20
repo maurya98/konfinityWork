@@ -1,0 +1,15 @@
+var tri=0;
+var sq=0;
+const area=(b,h)=>{
+  sq=b*b;
+  tri=.5*b*h;
+  if(tri>sq){
+    return(tri);
+  }
+  else{
+    return(sq);
+  }
+};
+var a=area();
+console.log(a);
+module.exports=area;

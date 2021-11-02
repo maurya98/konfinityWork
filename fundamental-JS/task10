@@ -1,0 +1,11 @@
+const sol=(n,m)=>{
+  if((n>=0&&m<0)||(n<0&&m>=0)){
+    return(true);
+  }
+  else{
+    return(false);
+  }
+};
+var a=sol();
+console.log(a);
+module.exports=sol;

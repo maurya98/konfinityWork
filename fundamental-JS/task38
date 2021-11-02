@@ -1,0 +1,12 @@
+const fact=(n)=>{
+  var f=1;
+  if(n===1)
+    return(1);
+  else{
+    for(var i=1;i<=n;i++){
+      f=f*i;
+    }
+    return(f);
+  }
+};
+module.exports=fact;

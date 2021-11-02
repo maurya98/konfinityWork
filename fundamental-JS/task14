@@ -1,0 +1,22 @@
+var d1=0;
+var d2=0;
+var d3=0;
+const digit=(a,b,c)=>{
+  if(a>0&&b>0&&c>0){
+    d1=a%10;
+    d2=b%10;
+    d3=c%10;
+    if(d1===d2&&d1===d3){
+      return(true);
+    }
+    else{
+      return(false);
+    }
+  }
+  else{
+    return(false);
+  }
+};
+var d=digit();
+console.log(d);
+module.exports=digit;

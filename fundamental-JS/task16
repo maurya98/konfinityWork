@@ -1,0 +1,23 @@
+var dir="";
+const d=(i)=>{
+  switch(i){
+    case 1:
+        dir="East";
+        break;
+    case 2:
+        dir="West";
+        break;
+    case 3:
+        dir="North";
+        break;
+    case 4:
+        dir="South";
+        break;
+    default:
+        dir="Wrong Input";
+  }
+  return(dir);
+};
+var a=d();
+console.log(a);
+module.exports=d;

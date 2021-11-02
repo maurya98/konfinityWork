@@ -1,0 +1,6 @@
+const cur=(inr)=>{
+  return(inr/75);
+};
+var usd=cur(100);
+console.log(usd);
+module.exports=cur;

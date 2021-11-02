@@ -1,0 +1,14 @@
+var d=0;
+const sol=(n)=>{
+  if(n<13){
+    d=13-n;
+    return(d);
+  }
+  else if(n>13){
+    d=(n-13)*2;
+    return(d);
+  }
+};
+var num=sol();
+console.log(num);
+module.exports=sol;

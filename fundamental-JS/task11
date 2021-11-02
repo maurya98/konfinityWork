@@ -1,0 +1,13 @@
+const mul=(n)=>{
+  if(n>0){
+    if(n%3===0||n%7===0){
+      return(true);
+    }
+    else{
+      return(false);
+    }
+  }
+};
+var a=mul();
+console.log(a);
+module.exports=mul;

@@ -1,0 +1,13 @@
+var s=0;
+const sum=(n,m)=>{
+  s=n+m;
+  if(n===m){
+    return(3*s);
+  }
+  else{
+    return(s);
+  }
+};
+var a=sum();
+console.log(a);
+module.exports=sum;

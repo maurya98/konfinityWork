@@ -1,0 +1,8 @@
+const area=(base,height)=>{
+  return(0.5*base*height);
+};
+  var base =20;
+  var height=10;
+var v=area(base,height);
+console.log(v);
+module.exports=area;

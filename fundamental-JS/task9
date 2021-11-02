@@ -1,0 +1,11 @@
+const num=(n)=>{
+  if((n>=80&&n<=120)||(n>=380&&n<=420)){
+    return(true);
+  }
+  else{
+    return(false);
+  }
+};
+var a=num();
+console.log(a);
+module.exports=num;

@@ -1,0 +1,20 @@
+var yr=0;
+const leap=(i)=>{
+  if((i%4)===0){
+    if((i%100)!==0){
+    yr=1;
+    }
+    else{
+        if((i%400)===0){
+            yr=1;
+        }
+        else{
+          yr=0;
+        }
+    }
+}
+  return(yr);
+};
+var l=leap();
+console.log(l);
+module.exports=leap;

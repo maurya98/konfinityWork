@@ -1,0 +1,13 @@
+var s=0;
+const sum=(n,m)=>{
+  s=n+m;
+  if(s>=50&&s<=80){
+    return(65);
+  }
+  else{
+    return(80);
+  }
+};
+var a=sum();
+console.log(a);
+module.exports=sum;
