@@ -1,0 +1,38 @@
+const fs=require("fs");
+const path=require("path");
+
+async function read(a){
+  return new Promise(resolve=>{
+    fs.readFile(a,async function(err,content){
+      resolve(content); 
+    });
+  });
+}
+async function s(a){
+  return new Promise((resolve,reject)=>{
+    fs.stat(a,async function(err,stats){
+      if(err)
+        reject(err);
+      else
+        resolve(stats);
+    });
+  });
+}
+
+const gk=(p,index)=>{
+  return new Promise((resolve,reject)=>{
+    fs.readdir(p,async function(err,content){
+      if(err)
+        reject("Error occured while fetching files from Directory");
+      else{
+        var pathtofile=path.join(p,content[index]);
+        var d=await read(pathtofile);
+        var stats=await s(pathtofile);
+        var obj={data:d.toString(),size:stats.size,birthTime:stats.birthtimeMs,filename:content[index]};
+        resolve(obj);
+      }
+    });
+  });
+};
+
+module.exports=gk;

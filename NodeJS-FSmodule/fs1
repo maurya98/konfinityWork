@@ -1,0 +1,12 @@
+const path=require('path');
+const gk=(filepath,pos,str)=>{
+  let base_name = path.basename(filepath);
+  let dirname = path.dirname(filepath);
+  if(pos==='start')
+    var finalpath=path.join(str,filepath);
+  else if(pos==='end')
+    finalpath=path.join(filepath,str);
+  var obj={baseName:base_name,dirName:dirname,finalPath:finalpath};
+  return obj;
+};
+module.exports=gk;

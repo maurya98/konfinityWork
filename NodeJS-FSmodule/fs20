@@ -1,0 +1,24 @@
+const fs=require("fs");
+const f=require("./fs4");
+const gk=(s,data)=>{
+  return new Promise((resolve,reject)=>{
+    f(s).then(res=>{
+      fs.appendFile(s,data,err=>{
+        if(err)
+          reject(err);
+        else
+          resolve("Data appended successfully");
+      });
+    }).catch(err=>{
+      reject("Cannot append data because : File does not exists");
+    });
+  });
+};
+
+gk().then(res=>{
+  return res;
+  }).catch(err=>{
+    return err;
+  });
+
+module.exports=gk;

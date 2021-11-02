@@ -1,0 +1,20 @@
+const fs=require('fs');
+const gk=(file)=>{
+  var dir=0,f=0;
+  return new Promise((resolve,reject)=>{
+  fs.readdir(file,(error,arr) => {
+  if(error)
+    reject("Error occured while reading directory");
+  else{
+    for(var i=0;i<arr.length;i++){
+      if((arr[i].split(".")[1]))
+        f++;
+      else
+        dir++;
+    }
+    var obj={countDir:dir, countFile:f, files:arr};
+    resolve(obj);
+  }});
+  });
+};
+module.exports=gk;

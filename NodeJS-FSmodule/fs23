@@ -1,0 +1,26 @@
+const fs=require("fs");
+const a=require("./fs4");
+const b=require("./fs21");
+const c=require("./fs22");
+const gk=(path)=>{
+  return new Promise((resolve,reject)=>{
+    a(path).then(res=>{
+    c(path).then(res=>{
+      resolve("File exists : Directory removed");
+    }).catch(err=>{
+      reject(err);  
+    });
+    }).catch(err=>{
+      b(path).then(res=>{
+      c(path).then(res=>{
+        resolve("New directory created : Directory removed");
+      }).catch(err=>{
+        reject(err);
+      });
+      }).catch(err=>{
+        reject(err);
+      });
+    });
+  });
+};
+module.exports=gk;

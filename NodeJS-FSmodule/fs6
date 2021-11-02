@@ -1,0 +1,23 @@
+const fs=require('fs');
+const path=require('path');
+const gk=(file)=>{
+  var js=0,txt=0,c=0;
+  return new Promise((resolve,reject)=>{
+  fs.readdir(file,(error,arr) => {
+  if(error)
+    reject("Error occured while reading directory");
+  else{
+    for(var i=0;i<arr.length;i++){
+      if((arr[i].split("."))[1]==="js")
+        js++;
+      else if((arr[i].split("."))[1]==="txt")
+        txt++;
+      else
+        c++;
+    }
+    var obj={countJs:js, countTxt:txt, count:c, files:arr};
+    resolve(obj);
+  }});
+  });
+};
+module.exports=gk;
