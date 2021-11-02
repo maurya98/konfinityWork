@@ -1,0 +1,20 @@
+var a=[];
+var posts={ title: 'Post one' , body:'This is post one' };
+const createPost=(posts,callback)=>{
+  a.push(posts);
+};
+setTimeout(createPost,2000);
+
+const getPost=(a)=>{
+  return callback(a); 
+};
+
+const callback=(a)=>{
+  return a;
+};
+
+module.exports = {
+  posts: posts,
+  createPost: createPost,
+  getPost: getPost
+};

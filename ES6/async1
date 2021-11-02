@@ -1,0 +1,16 @@
+async function loadData(s) {
+  return new Promise((resolve,reject) => {
+    if(s>0)
+      resolve({data:s});
+    else
+      throw new Error("Value must be greater than 0");
+  });
+}
+
+loadData(2).then(result => {
+    return (result);
+  })
+
+module.exports = {
+  data: loadData
+};

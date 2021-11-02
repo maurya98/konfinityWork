@@ -1,0 +1,21 @@
+function double(num){
+  return new Promise(resolve => {
+    setTimeout(() => { resolve(num*2);
+    }, 2000);
+  });
+}
+
+async function addAsync(x,y,z){
+  const a= await double(x);
+  const b= await double(y);
+  const c= await double(z);
+  return a+b+c;
+}
+
+addAsync(10,20,30).then(result=>{
+  return result;
+});
+
+module.exports = {
+  sum: addAsync
+};

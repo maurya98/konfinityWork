@@ -1,0 +1,27 @@
+const filter5=(arr)=>{
+  var a=[];
+  for(var i=0;i<arr.length;i++){
+    if(arr[i]!==5)
+      a.push(arr[i]);
+  }
+  return a;
+};
+
+const filter10=(arr)=>{
+  var b=[];
+  for(var i=0;i<arr.length;i++){
+    if(arr[i]!==10)
+     b.push(arr[i]);
+  }
+  return b;
+};
+
+const filter=(arr,callback)=>{
+  return callback(arr,callback);
+};
+
+module.exports = {
+  ten: filter10,
+  five: filter5,
+  fil: filter
+};

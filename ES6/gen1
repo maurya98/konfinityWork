@@ -1,0 +1,19 @@
+function *gk(){
+  yield "Hello World!!!";
+  yield "This is an example of generator";
+  yield 'Here we use yield keyword for creating a stopping point';
+  yield 'And we move from one stopping point to other by using .next()';
+  yield 'We can get the value by appending .value after .next()';
+  yield 'Also look at the done value - it stays false until there is no stopping point ';  
+  return 'Also in the last we can use return keyword if we want';
+}
+
+var r=gk();
+r.next().value;
+r.next().value;
+r.next().value;
+r.next().value;
+r.next().value;
+
+module.exports={
+  generatorFn:gk};

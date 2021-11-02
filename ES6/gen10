@@ -1,0 +1,45 @@
+function* fib(n) {
+  var a=0,b=1;
+  var c=a+b;
+  yield a;
+  yield b;
+  while (c<n) {
+    yield c;
+    a=b;
+    b=c;
+    c=a+b;
+  }
+}
+
+function* filter(array) {
+  let arry = array;
+  for(var i=0;i<arry.length;i++){
+    if(arry[i]%2===0){
+      arry[i] = 0;
+      yield arry;
+    }
+  }
+}
+
+function* gaurav(n,array){
+  var array=[];
+  var fabo=fib(n);
+  for(let n of fabo)
+    array.push(n);
+  var arry=[];
+  var f=filter(array);
+  for(let n of f)
+    arry.push(n);
+  for (var z of arry)
+    yield z;
+}
+var g=gaurav();
+for (let n of g){
+  n;
+}
+
+module.exports={
+  fibonacciFn:fib,
+  filterFn:filter,
+  checkFn:gaurav
+  };

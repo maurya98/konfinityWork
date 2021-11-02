@@ -1,0 +1,17 @@
+var error=false;
+const up=(a,error)=>{
+  return new Promise((resolve, reject) => {
+    if((error===false))
+      resolve(a.toUpperCase());
+    else
+      reject("Error occured!");
+  });
+};
+
+up("hello world!", false).then(result=>{
+  return result;
+}).catch(er=>{
+  return er;
+});
+
+module.exports = { up: up };

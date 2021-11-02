@@ -1,0 +1,28 @@
+async function timeout(n){
+  return new Promise(resolve=>{
+    setTimeout(()=>{
+      resolve(n+" ms timer finished");},n);
+    });
+}
+
+async function resolveAfter2Second(){
+  console.log("starting slow promise");
+  return timeout(2000);
+}
+
+async function resolveAfter1Second(){
+  console.log("starting fast promise");
+  return timeout(1000);
+}
+
+var promises=[];
+async function concurrentStart(){
+  console.log("==CONCURRENT START with await==");
+  var a=resolveAfter2Second();
+  var b=resolveAfter1Second();
+  promises.push(a);
+  promises.push(b);
+  return Promise.all(promises);
+}
+
+module.exports = concurrentStart;

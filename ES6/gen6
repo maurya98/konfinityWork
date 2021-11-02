@@ -1,0 +1,23 @@
+function* gk() {
+  var a=0,b=1;
+  yield a;
+  yield b;
+  for(var i=0;;) {
+    var c=a+b;
+    a=b;
+    b=c;
+    yield c;
+  }
+}
+
+on = gk();
+
+for (let num of on) {
+  if (num<60) {
+    break;
+  }
+  (num);
+}
+
+module.exports={
+  fibonacciFn:gk};

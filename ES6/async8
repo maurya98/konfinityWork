@@ -1,0 +1,26 @@
+var fs = require("fs");
+function writeFile(s) {
+  return new Promise(function(resolve, reject) {
+    fs.writeFile("file1.txt",s,err => {
+      if (err)
+        reject(err);
+      else 
+        resolve("file created"); 
+    });
+  });
+}
+
+async function create(s) {
+ const x=await writeFile(s);
+ return x;
+}
+
+create().then(result=>{
+  return result;
+  }).catch(error=>{
+  return error;
+  });
+  
+module.exports = {
+  created: create
+};

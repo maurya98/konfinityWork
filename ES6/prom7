@@ -1,0 +1,20 @@
+var post=[];
+var posts={ title: 'Post one' , body:'This is post one' };
+const createPost=(posts)=>{
+  return new Promise((resolve, reject) => {
+    if(true)
+      resolve(post.push(posts));
+    else
+      reject("Error: Something went wrong");
+  });
+};
+
+const getPost=(p)=>{
+  return p;
+};
+
+module.exports = {
+  posts: post,
+  getPost: getPost,
+  createPost: createPost
+};

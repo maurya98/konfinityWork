@@ -1,0 +1,22 @@
+var fs = require("fs");
+function readFile(p) {
+  return new Promise(function(resolve, reject) {
+    fs.readFile(p, (err, data) => {
+      if (err) {
+        reject("No file found");
+      } else 
+        resolve(data.toString()); 
+    });
+  });
+}
+
+var p="helper.txt";
+readFile(p).then(result => {
+    console.log(result);
+  }).catch(err => {
+    console.log(err);
+  });
+
+module.exports = {
+  readFile: readFile
+};

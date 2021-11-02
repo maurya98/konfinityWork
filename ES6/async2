@@ -1,0 +1,10 @@
+async function f1(s) {
+  return new Promise(resolve => {
+    setTimeout(() => { resolve("done!");
+    }, 1000);
+  });
+}
+
+module.exports = {
+  func: f1
+};

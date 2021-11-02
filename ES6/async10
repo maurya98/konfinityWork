@@ -1,0 +1,23 @@
+async function timeout(n){
+  return new Promise(resolve=>{
+    setTimeout(()=>{
+      resolve("");},n);
+    });
+}
+
+async function resolveAfter1Second(){
+  var x=await timeout(1000);
+  return "1 sec";
+}
+async function resolveAfter2Second(){
+  var y=await timeout(2000);
+  return "2 sec";
+}
+
+async function sequentialStart(){
+  var a=await resolveAfter1Second();
+  var b=await resolveAfter2Second();
+  return({slow:b,fast:a});
+}
+
+module.exports = sequentialStart;

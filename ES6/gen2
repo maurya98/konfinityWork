@@ -1,0 +1,7 @@
+function *gk(){
+  for(var i=1;;)
+    yield i++;
+}
+
+module.exports={
+  nn:gk}

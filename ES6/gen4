@@ -1,0 +1,21 @@
+function* evenNumbers() {
+  let i = 0;
+  while (true) {
+    if (i % 2 === 0) {
+      yield i;
+    }
+    i += 1;
+  }
+}
+
+on = evenNumbers();
+
+for (let num of on) {
+  if (num > 25) {
+    break;
+  }
+  (num);
+}
+
+module.exports={
+  evenNumberFn:evenNumbers};

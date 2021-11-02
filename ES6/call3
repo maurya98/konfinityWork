@@ -1,0 +1,19 @@
+const division=(n1,n2,callback)=>{
+  var r=n1/n2;
+  if(n2!==0)
+    return callback("no error",r);
+  else
+    return callback("num2 shouldn't be zero",null);
+};
+
+const callback=(err,r)=>{
+  if(r===null)
+    return err;
+  else
+    return r;
+};
+
+module.exports = {
+  div: division,
+  call: callback
+};

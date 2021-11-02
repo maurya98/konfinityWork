@@ -1,0 +1,12 @@
+const b=()=>{
+  return "Hello!!!";
+};
+
+const a=(callback)=>{
+  return callback(b);
+};
+
+module.exports = {
+  first: a,
+  second: b
+};

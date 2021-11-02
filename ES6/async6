@@ -1,0 +1,23 @@
+var fs = require("fs");
+function display(file) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(file, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+async function d(file) {
+  var c = await display(file);
+  return c;
+}
+display("./async6.js").then(res => {
+  return(res);
+});
+
+module.exports = {
+  content: display
+};

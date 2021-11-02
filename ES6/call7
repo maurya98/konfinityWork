@@ -1,0 +1,27 @@
+const fizz=(arr)=>{
+  var c=0;
+  for(var i=0;i<arr.length;i++){
+    if(arr[i]%3===0)
+      c++;
+  }
+  return c;
+};
+
+const buzz=(arr)=>{
+  var count=0;
+  for(var i=0;i<arr.length;i++){
+    if(arr[i]%5===0)
+      count++;
+  }
+  return count;
+};
+
+const filter=(arr,callback)=>{
+  return callback(arr,callback);
+};
+
+module.exports = {
+  fizz: fizz,
+  buzz: buzz,
+  fil: filter
+};

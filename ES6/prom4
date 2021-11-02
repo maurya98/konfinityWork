@@ -1,0 +1,17 @@
+var error=false;
+const erro=(error)=>{
+  return new Promise((resolve, reject) => {
+    if((error===false))
+      resolve("No error!");
+    else
+      reject("Error occured!");
+  });
+};
+
+erro(error).then(result=>{
+  return result;
+}).catch(er=>{
+  return er;
+});
+
+module.exports = { erro: erro };

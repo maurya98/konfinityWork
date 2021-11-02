@@ -1,0 +1,25 @@
+var fs = require("fs");
+function readFile(file) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(file, (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        var c=(data.toString().split(' ')).length;
+        resolve(c);
+      }
+    });
+  });
+}
+async function count(file) {
+  var x = await readFile(file);
+  return x;
+}
+count().then(res => {
+  return(res);
+}).catch(err => {
+  return err;});
+
+module.exports = {
+  counter: count
+};

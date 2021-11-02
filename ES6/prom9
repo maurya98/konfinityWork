@@ -1,0 +1,40 @@
+var fs = require("fs");
+function readFile(fname) {
+  return new Promise(function(resolve, reject) {
+    fs.readFile(fname, (err, data) => {
+      if (err)
+        reject("No file found");
+      else 
+        resolve(data.toString()); 
+    });
+  });
+}
+
+function writeFile(fname,s) {
+  return new Promise(function(resolve, reject) {
+    fs.writeFile(fname,s,err => {
+      if (err)
+        reject("Failed");
+      else 
+        resolve("Done!"); 
+    });
+  });
+}
+
+var fname="right.txt";
+var s="HELLO EVERYONE!";
+readFile(fname).then(result => {
+    return result;
+  }).catch(err => {
+    return err;
+  });
+writeFile(fname,s).then(result => {
+    return result;
+  }).catch(err => {
+    return err;
+  });
+
+module.exports = {
+  readFile: readFile,
+  writeFile: writeFile
+};

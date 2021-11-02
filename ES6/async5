@@ -1,0 +1,18 @@
+var arr=[];
+var c=[];
+function adding(c){
+  return new Promise(resolve => {
+    setTimeout(() => {
+      for(var i in c){
+        arr.push(c[i]);
+      }resolve(arr);}, 7000);
+  });
+}
+
+adding(c).then(result => {
+  return result;
+});
+
+module.exports = {
+  push: adding
+};

@@ -1,0 +1,21 @@
+const fetch = require("node-fetch");
+async function *gk() {
+  while(true){
+    url ="https://www.random.org/decimal-fractions/?num=1&dec=10&col=1&format=plain&rnd=new";
+    num = await fetch(url).then(res => res.json());
+    var final_num = Number(num);
+    
+    n = Number(num * 10);
+    yield(n);
+  }
+}
+
+async function gaurav(){
+  var x=gk();
+  for(let m of x)
+    await m;
+}
+
+module.exports = {
+  asyncRandomNumbers :gk
+};
